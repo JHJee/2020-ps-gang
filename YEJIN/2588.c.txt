@@ -1,0 +1,43 @@
+#include <stdio.h>
+/*#include <math.h>
+
+void recursion(int a, int b);
+
+void main() {
+	int a, b;
+	scanf_s("%d", &a);
+	scanf_s("%d", &b);
+
+	recursion(a, b);
+
+	printf("%d\n", a * b);
+}
+
+void recursion(int a, int b) {
+
+	int n = b;
+	int i = 0;
+
+	if (b == 0) return;
+	else if (b > 0) {
+
+		for (n = b;n > 10;n = n / 10) //자릿수 구하기
+			i++; //10자리->1 100자리->2...
+
+		recursion(a, (b % (int)(pow(10, i))));
+	}
+
+	if (((b / (int)(pow(10, i))) % 10) != 0)
+		printf("%d\n", a * ((b / (int)(pow(10, i))) % 10));
+	else
+		printf("0\n");
+}*/
+
+int main() {
+	int a, b;
+	scanf("%d %d", &a, &b);
+	printf("%d\n", a * ((b % 100) % 10));//일자리
+	printf("%d\n", a * ((b % 100) / 10));//십자리
+	printf("%d\n", a * (b / 100));//백자리
+	printf("%d", a * b);
+}
